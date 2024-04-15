@@ -21,7 +21,7 @@ def main(*args, **kwargs):
 
 def _add_print_modules(subparsers: _SubParsersAction):
     from tools import print_modules
-    parser: ArgumentParser = subparsers.add_parser("print_modules")
+    parser: ArgumentParser = subparsers.add_parser("print_modules", help=print_modules.__doc__)
     parser = print_modules.add_arguments(parser)
     parser.set_defaults(handler=print_modules.main)
 
