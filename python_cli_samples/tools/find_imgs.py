@@ -4,10 +4,10 @@ from argparse import ArgumentParser, RawDescriptionHelpFormatter
 from pathlib import Path
 
 try:
-    import _add_path
+    from . import _add_path
 except:
     try:
-        from . import _add_path
+        import _add_path
     except Exception as e:
         raise e
 from python_cli_samples import utils
