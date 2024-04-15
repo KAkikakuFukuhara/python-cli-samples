@@ -2,7 +2,10 @@
 """
 from argparse import ArgumentParser, _SubParsersAction
 
-import _add_path
+try:
+    from . import _add_path
+except:
+    import _add_path
 
 def add_arguments(parser: ArgumentParser) -> ArgumentParser:
     subparsers: _SubParsersAction = parser.add_subparsers()
